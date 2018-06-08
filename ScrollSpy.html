@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Based on https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_scrollspy2&stacked=h -->
+<!-- Added a Jumbotron and sticky sidebar; more responsive (use col-12) -->
+<!-- Removed use of nav-pills in sidebar; adjusted spacing -->
+<html lang="en">
+<head>
+  <title>ScrollSpy Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+    }
+  div.section {
+    height: 500px;
+    padding: 5px 0 5px 20px;
+    }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    }
+  .nav-link.active {
+    color:red;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="jumbotron mb-0">
+    <h1>ScrollSpy Example</h1>
+    <p>with a sticky sidebar nav</p>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-3 col-12 pt-2" id="myScrollspy">
+      <ul class="nav flex-column sticky">
+        <li class="nav-item">
+          <a class="nav-link active" href="#section1">Section 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">Section 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">Section 3</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Section 4</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#section41">Link 1</a>
+            <a class="dropdown-item" href="#section42">Link 2</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-sm-9 col-12 px-0">
+      <div id="section1" class="section bg-success">    
+        <h1>Section 1</h1>
+        <p>Scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section2" class="section bg-warning"> 
+        <h1>Section 2</h1>
+        <p>Scroll this section and look at the navigation list while scrolling!</p>
+      </div>        
+      <div id="section3" class="section bg-secondary">         
+        <h1>Section 3</h1>
+        <p>Scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section41" class="section bg-danger">         
+        <h1>Section 4-1</h1>
+        <p>Scroll this section and look at the navigation list while scrolling!</p>
+      </div>      
+      <div id="section42" class="section bg-info">         
+        <h1>Section 4-2</h1>
+        <p>Scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
